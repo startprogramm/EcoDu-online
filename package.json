@@ -1,0 +1,17 @@
+{
+  "name": "ecodu",
+  "version": "1.0.0",
+  "description": "EcoDu - Learn Ecology Online",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - EcoDu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">EcoDu🌱</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="profile.html" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" id="logout-btn" class="nav-link">Logout</a>
+                </li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main class="quiz-main">
+        <section class="quiz-section">
+            <div class="quiz-container">
+                <div id="quiz-intro" class="quiz-intro">
+                    <h1 id="quiz-title">Loading Quiz...</h1>
+                    <p id="quiz-description">Please wait...</p>
+                    <button id="start-quiz-btn" class="btn primary">Start Quiz</button>
+                </div>
+
+                <div id="quiz-content" class="quiz-content" style="display: none;">
+                    <div class="quiz-header">
+                        <h2>Question <span id="current-question">1</span> of <span id="total-questions">10</span></h2>
+                        <div class="progress-bar">
+                            <div id="progress" class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="question-container">
+                        <h3 id="question-text" class="question-text">Loading question...</h3>
+                        <div id="options-container" class="options-container"></div>
+                    </div>
+
+                    <div class="quiz-actions">
+                        <button id="next-btn" class="btn primary" disabled>Next Question</button>
+                    </div>
+                </div>
+
+                <div id="quiz-results" class="quiz-results" style="display: none;">
+                    <div class="results-card">
+                        <i class="fas fa-trophy results-icon"></i>
+                        <h2>Quiz Completed!</h2>
+                        <div class="score-display">
+                            <span id="final-score">0</span>/<span id="final-total">10</span>
+                        </div>
+                        <p class="percentage">Score: <span id="percentage">0</span>%</p>
+                        <p id="feedback-message" class="feedback">Great job!</p>
+                        <div class="results-actions">
+                            <a href="index.html" class="btn secondary">Back to Home</a>
+                            <a href="profile.html" class="btn primary">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <div class="section-content">
+            <p class="copyright-text">© 2025 EcoDu. All rights reserved.</p>
+            <div class="social-link-list">
+                <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/quiz.js"></script>
+</body>
+</html>

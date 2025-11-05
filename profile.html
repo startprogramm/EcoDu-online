@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - EcoDu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">EcoDu🌱</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="profile.html" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" id="logout-btn" class="nav-link">Logout</a>
+                </li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main class="profile-main">
+        <section class="profile-section">
+            <div class="profile-container">
+                <h1>My Profile</h1>
+
+                <div class="profile-card">
+                    <div class="profile-info">
+                        <div class="avatar-section">
+                            <div class="avatar-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="user-details">
+                            <h2 id="user-name">Loading...</h2>
+                            <p id="user-email">Loading...</p>
+                            <p class="member-since">Member since: <span id="member-date">Loading...</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Lessons Completed</h3>
+                        <p class="stat-number" id="lessons-completed">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Quizzes Taken</h3>
+                        <p class="stat-number" id="quizzes-taken">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-comment"></i>
+                        <h3>Comments</h3>
+                        <p class="stat-number" id="comments-count">0</p>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Recent Quiz Results</h2>
+                    <div id="quiz-results" class="quiz-results-list">
+                        <p class="loading-text">Loading results...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <div class="section-content">
+            <p class="copyright-text">© 2025 EcoDu. All rights reserved.</p>
+            <div class="social-link-list">
+                <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/profile.js"></script>
+</body>
+</html>
