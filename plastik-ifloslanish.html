@@ -80,6 +80,25 @@
             <span>Video developer</span>
          </div>
       </div>
+
+      <div class="lesson-actions">
+         <a href="quiz.html?lesson=plastik-ifloslanish" class="btn quiz-btn">
+            <i class="fas fa-clipboard-question"></i> Take Quiz
+         </a>
+      </div>
+   </div>
+
+   <div class="comments-section">
+      <h3 class="comments-title">Comments</h3>
+
+      <form id="comment-form" class="comment-form">
+         <textarea name="comment" placeholder="Write your comment..." rows="3" required></textarea>
+         <button type="submit" class="btn">Post Comment</button>
+      </form>
+
+      <div id="comments-container" class="comments-list">
+         <p class="loading-text">Loading comments...</p>
+      </div>
    </div>
 
 </section>
@@ -105,6 +124,28 @@
 
 <!-- custom js file link  -->
 <script src="watch-video.js"></script>
+<script type="module">
+   import { loadComments, setupCommentForm } from './js/comments.js';
+
+   const lessonSlug = 'plastik-ifloslanish';
+
+   async function initComments() {
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/rest/v1/lessons?slug=eq.${lessonSlug}`, {
+         headers: {
+            'apikey': import.meta.env.VITE_SUPABASE_ANON_KEY
+         }
+      });
+      const lessons = await response.json();
+
+      if (lessons && lessons.length > 0) {
+         const lessonId = lessons[0].id;
+         await loadComments(lessonId, 'comments-container');
+         setupCommentForm('comment-form', lessonId, 'comments-container');
+      }
+   }
+
+   initComments();
+</script>
    
 </body>
 </html>
