@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300;1,700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Styling for the whole site */
+
+*{
+    font-family: "Poppins", sans-serif ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img{
+    width: 100%;
+
+}
+
+.section-content{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: max-content;
+}
+
+.section-title{
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+.section-title::after{
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 1.2rem;
+    background: greenyellow;
+}
+
+/* Navbar styling */
+
+header{
+    background: #31473A;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+header .navbar{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .nav-logo{
+    margin-left: 20px;
+}
+
+.navbar .nav-logo .logo-text{
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.navbar .nav-menu{
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link{
+    padding: 10px 18px;
+    color: white;
+    font-size: medium;
+    border-radius: 20px;
+    transition: 0.3s ease;
+} 
+
+.navbar .nav-menu .nav-link:hover{
+    color: #31473A;
+    background-color: #EDF4F2;
+}
+
+.navbar :where(#menu-close-button, #menu-open-button){
+    display: none;
+}
+
+/* Hero Section Styling*/
+.hero-section{
+    background: #7C8363;
+    min-height: 100vh;
+
+}
+
+.hero-section .section-content{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: #EDF4F2;
+    justify-content: space-between; 
+}
+
+.hero-section .hero-details .title{
+    font-size: xx-large;
+    color: #CADCAE;
+    font-family: "Miniver", sans-serif; 
+}
+
+.hero-section .hero-details .subtitle{
+    font-size: x-large;
+    margin-top: 8px;
+    max-width: 70%;
+    font-weight: bolder;
+}
+
+.hero-section .hero-details .description{
+    max-width: 70%;
+    margin: 24px 0 40px;
+    font-size: medium;
+}
+
+.hero-section .hero-details .button{
+    padding: 10px 26px;
+    border: 2px solid transparent;
+    color: green;
+    border-radius: 20px;
+    background: greenyellow;
+    font-weight: bolder;
+    transition: 0.5s ease;
+}
+
+.hero-section .hero-details .button:hover{
+
+    color: greenyellow;
+    background: green;
+}
+
+.hero-section .hero-image-wrapper {
+    max-width: 500px;
+    margin-right: 20px;
+}
+
+/* About section styling */
+
+.about-section{
+    padding: 120px;
+    background: #EDF4F2;
+}
+
+.about-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about-section .about-details .section-title{
+    padding: 0;
+}
+
+.about-section .about-details{
+    max-width: 50%;
+}
+
+.about-section .about-details .text{
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: small;
+}
+
+.about-section .social-link-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.about-section .social-link-list .social-link{
+    color: green;
+    font-size: large;
+    transition: 0.3s ease;
+}
+
+
+.about-section .social-link-list .social-link:hover{
+    color: #31473A;
+}
+
+/*Video Lessons section Styling*/
+
+.lessons-section{
+    background: #242b27;
+    color: #EDF4F2;
+    padding: 50px 10px 0;
+}
+
+.lessons-section .lessons-list{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 50px;
+}
+
+.lessons-section .lessons-list .lessons-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    gap: 0px;
+}
+
+.lessons-section .lessons-list .lessons-item a img{
+    width: 100%;
+    max-width: 83%;
+    max-height: 60%;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: black;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+.lessons-section .lessons-list .lessons-item a{
+    display:flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: top;
+}
+
+.lessons-section .lessons-list .lessons-item a img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.lessons-section .lessons-list .lessons-item .name{
+    margin: 10px 0 10px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.lessons-section .lessons-list .lessons-item .text{
+    font-size: small;
+    max-width: 90%;
+    line-height: 25px;
+    color: #CADCAE;
+    font-weight: 500px;
+    text-align: center;
+}
+
+
+/* Team section styling */
+.team-section{
+    padding: 100px 20px;
+    background: #EDF4F2;
+}
+.team-section .slider-wrapper{
+    overflow: hidden;
+    padding: 0 40px;
+}
+
+.team-section .team-list .team-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 35px;
+}
+.team-section .team-list .team-item .team-image{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.team-section .team-list .team-item .name{
+    font-size: large;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+.team-section .team-list .team-item .role{
+    font-size: large;
+    color: green;
+    margin-bottom: 20px;
+}
+.team-section .slider-wrapper{
+    position: relative;
+}
+.team-section .swiper-button-prev, .team-section .swiper-button-next{
+    color: #31473A;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.team-section .swiper-button-prev:hover, .team-section .swiper-button-next:hover{
+    background: rgba(255, 255, 255, 0.9);
+}
+.team-section .swiper-pagination-bullet{
+    background: #31473A;
+    opacity: 0.7;
+}
+.team-section .swiper-pagination-bullet-active{
+    background: #31473A;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+}
+
+/* Footer styling */
+.footer-section{
+    background: #31473A;
+    padding: 50px 20px;
+}
+.footer-section .section-content{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-section :where(.copyright-text, .social-link, .policy-link){
+    color: white;   
+    transition: 0.3s ease;
+}
+.footer-section .social-link-list{
+    display: flex;
+    gap: 15px;
+}
+.footer-section .social-link-list .social-link{
+    font-size: large;
+}
+.footer-section .social-link-list .social-link:hover{
+    color: greenyellow;
+}
+.footer-section .policy-text .policy-link:hover{
+    color: greenyellow;
+}
+.footer-section .policy-text .separator{
+    margin: 0 10px;
+    color: white;
+}
+
+
+/* Responsive styling for tablets and smaller screens */
+@media screen and (max-width: 1200px) {
+    .lessons-section .lessons-list{
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .lessons-section .lessons-list .lessons-item{
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
+/* Responsive styling for mobile devices */
+@media screen and (max-width: 900px) {
+    body.show-mobile-menu header::before{
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    .navbar :where(#menu-close-button, #menu-open-button){
+        font-size: large;
+        display: block;
+    }
+
+    .navbar #menu-close-button{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .navbar #menu-open-button{
+        color: white;
+    }
+    
+    .navbar .nav-menu{
+       display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: white;
+        transition: left 0.2s ease;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu{
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-link{
+        color: black;
+        font-size: large;
+        display: block;
+        margin-top: 17px;
+    }
+    .hero-section .section-content{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 20px;
+    }
+
+    .hero-section .hero-details :is(.subtitle, .description), .about-section .about-details{
+        max-width: 100%;
+    }
+
+    .hero-section .hero-details .button{
+        justify-content: center;
+    }
+
+    .hero-section .hero-image-wrapper{
+        max-width: 270px;
+        margin-right: 0;
+    }
+
+    .about-section .section-content{
+        flex-direction: column-reverse;
+        gap: 70px;
+    }
+
+    .about-section .about-image-wrapper .about-image{
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        aspect-ratio: 1;
+    }
+    .about-section .about-details{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-section{
+        padding: 70px 20px;
+    }
+
+    .lessons-section{
+        padding: 70px 20px 0;
+    }
+
+    .lessons-section .section-title{
+        font-size: large;
+        padding-bottom: 70px;
+    }
+
+    .lessons-section .lessons-list{
+        gap: 40px;
+        padding-bottom: 70px;
+    }
+
+    .lessons-section .lessons-list .lessons-item{
+        max-width: 250px;
+    }
+
+    .lessons-section .lessons-list .lessons-item .name{
+        font-size: medium;
+        margin: 15px 0 8px;
+    }
+
+    .lessons-section .lessons-list .lessons-item .text{
+        font-size: smaller;
+        line-height: 20px;
+    }
+
+    .about-section .about-details .text{
+        font-size: x-small;
+        line-height: 20px;
+        margin: 30px 0 20px;
+    }
+
+    .about-section .social-link-list .social-link{
+        font-size: medium;
+    }
+}
+/* Responsive styling for very small mobile devices */
+@media screen and (max-width: 400px) {
+    .hero-section .hero-image-wrapper{
+        max-width: 200px;
+    }
+    .about-section .about-image-wrapper .about-image{
+        max-width: 200px;
+    }
+    .lessons-section .lessons-list .lessons-item{
+        max-width: 200px;
+    }
+    .lessons-section .lessons-list .lessons-item .lessons-video{
+        max-width: 100%;
+    }
+    .lessons-section .lessons-list{
+        gap: 30px;
+    }
+    .lessons-section .lessons-list .lessons-item .name{
+        font-size: small;
+    }
+    .lessons-section .lessons-list .lessons-item .text{
+        font-size: x-small;
+        line-height: 18px;
+    }
+    .about-section .about-details .text{
+        font-size: xx-small;
+        line-height: 18px;
+        margin: 20px 0 15px;
+    }
+    .about-section .social-link-list .social-link{
+        font-size: medium;
+    }
+    
+}
+
+@media screen and (max-width: 640px) {
+    .hero-section .hero-details .title{
+        font-size: x-large;
+    }
+    .hero-section .hero-details .subtitle{
+        font-size: large;
+    }
+    .hero-section .hero-details .description{
+        font-size: small;
+    }
+    .hero-section .hero-details .button{
+        font-size: medium;
+    }
+    .footer-section .footer-content{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
